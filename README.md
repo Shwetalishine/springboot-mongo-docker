@@ -44,7 +44,7 @@ curl --location --request POST 'http://localhost:8080/books' \
 
 - [x] Kill running container:
 ```
-docker rm <containerId>
+docker rm -f <containerId>
 ```
 
 #### docker-compose.yml
