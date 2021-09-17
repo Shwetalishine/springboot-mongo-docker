@@ -9,19 +9,19 @@ Steps & Commands
   
 
 - Step 2: run mongo image
-  command: **` docker run -d -p 27017:27017 --name mongodb mongo:latest **`
+  command: **` docker run -d -p 27017:27017 --name mongodb mongo:latest `**
 
 - Step 3: dockerize spring boot application 
   command: **` docker build -t springboot-mongodb:1.0 . `**
 
 - Step 4: run spring boot docker image and link that container to mongo container 
-   command: **` docker run -p 8080:8080 --name springboot-mongodb --link mongodb:mongo -d springboot-mongodb:1.0 **`
+   command: **` docker run -p 8080:8080 --name springboot-mongodb --link mongodb:mongo -d springboot-mongodb:1.0 `**
    
 - Step 5: check docker running containers  
   command: **` docker ps `**  - It should display two container ids
 
 - Step 6: check logs of spring boot image 
-  command: **` docker logs springboot-mongodb **`
+  command: **` docker logs springboot-mongodb `**
   
 - Step 6: if all good access your api  :tada:
 ```bash
@@ -33,7 +33,7 @@ curl --location --request POST 'http://localhost:8080/books' \
     "authorName":"Shwetali"
 }'
 ```
-- [x] login to mongo terminal to verify records **`docker exec -it mongodb bash`**
+- [x] login to mongo terminal to verify records **` docker exec -it mongodb bash `**
 - type mongo and enter
 - show dbs
 - use book
@@ -49,7 +49,7 @@ docker rm <containerId>
 
 #### docker-compose.yml
 
-application.yaml
+application.yml
 
 version : "3"
 services:
