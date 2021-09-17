@@ -69,5 +69,5 @@ services:
 
 - [x] navigate to resources folder:
 ```
-springboot-mongo-docker/src/main/resources and run docker-compose up
+springboot-mongo-docker and run docker-compose up
 ```
